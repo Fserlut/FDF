@@ -3,19 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gutorres <gutorres@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fserlut <fserlut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/10 23:09:51 by fserlut           #+#    #+#             */
-/*   Updated: 2019/10/12 21:33:31 by gutorres         ###   ########.fr       */
+/*   Updated: 2020/01/08 01:05:07 by fserlut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# define BUFF_SIZE	2048
+# define MOD(a) ((a < 0) ? -a : a)
+# define MAX(a,b) ((a < b) ? b: a)
+
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <sys/types.h>
+# include <sys/uio.h>
 
 typedef struct		s_list
 {
@@ -83,7 +89,7 @@ size_t				ft_strlcat(char *dst, const char *src, size_t size);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_strmap(char const *s, char (*f)(char));
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-int					ft_count_word(char *s, char l);
+int					ft_count_word(char *str, char c);
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
@@ -91,5 +97,6 @@ void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					*ft_range(int min, int max);
+int					get_next_line(const int fd, char **line);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: fserlut <fserlut@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/11 23:10:24 by fserlut           #+#    #+#              #
-#    Updated: 2019/10/24 14:13:49 by fserlut          ###   ########.fr        #
+#    Updated: 2020/01/06 23:08:18 by fserlut          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,7 +67,16 @@ SRC = ft_atoi.c \
 		ft_strmap.c \
 		ft_strmapi.c \
 		ft_count_word.c \
-		ft_sqrt.c
+		ft_sqrt.c \
+		get_next_line.c \
+		ft_lstnew.c \
+		ft_lstdelone.c \
+		ft_lstdel.c \
+		ft_lstadd.c \
+		ft_lstiter.c \
+		ft_lstmap.c \
+		ft_range.c \
+		
 
 FILE_O = ft_atoi.o \
 		ft_bzero.o \
@@ -124,7 +133,15 @@ FILE_O = ft_atoi.o \
 		ft_strmap.o \
 		ft_strmapi.o \
 		ft_count_word.o \
-		ft_sqrt.o
+		ft_sqrt.o \
+		get_next_line.o \
+		ft_lstnew.o \
+		ft_lstdelone.o \
+		ft_lstdel.o \
+		ft_lstadd.o \
+		ft_lstiter.o \
+		ft_lstmap.o \
+		ft_range.o \
 
 HEAD_FOLDER = ./
 
